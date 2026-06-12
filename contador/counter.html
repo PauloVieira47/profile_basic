@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de cliques</title>
+    <link rel="stylesheet" href="counter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contador de cliques</h1>
+
+      <div class="container-diplay">
+        <p id="valorInputP"></p>
+        <input
+          type="text"
+          id="input"
+          oninput="valorDoInput()"
+          placeholder="Digite algo..."
+        />
+
+        <p class="vContador">Contador: <span id="valorContador">0</span></p>
+        <div>
+          <button onclick="adicionar()">Adicionar</button>
+          <button onclick="resetar()">Resetar</button>
+          <button onclick="remover()">remover</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="counter.js"></script>
+  </body>
+</html>
