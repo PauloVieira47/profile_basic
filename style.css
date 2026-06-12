@@ -12,7 +12,7 @@
     --icon-toggle: url(./img/toggle-ligth.svg);
 }
 
-:root.dark {
+.dark {
     --background-image: url(./img/Background-dark.png);
     --background-image-mobile: url(./img/bg-mobile-dark.jpg);
     --color-primary: #ffffff;
@@ -53,7 +53,7 @@ body.dark {
     align-items: center;
     margin: 50px auto 0;
     width: 100%;
-    max-width: 540px;
+    max-width: 588px;
     padding: 24px;
 }
 
@@ -96,16 +96,20 @@ body.dark {
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    right: 0;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
+    animation: slideOut 0.4s;
 }
 
-:root.dark .toggle-theme-container button {
-    right: initial;
-    left: 0;
+.toggle-theme-container button:hover {
+    outline: 4px solid var(--icon-hover);
 }
+
+.dark .toggle-theme-container button {
+    animation: slideIn 0.4s forwards;
+}
+
 
 .toggle-theme-container span {
     display: block;
@@ -115,6 +119,26 @@ body.dark {
     background-color: var(--background-color-button);
     border: 1px solid var(--color-border);
     backdrop-filter: blur(4px);
+}
+
+@keyframes slideIn {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
 }
 
 .buttons {
