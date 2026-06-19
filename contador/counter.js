@@ -5,23 +5,37 @@ function valorDoInput() {
   valorDoInput1.innerHTML = valorInput;
 }
 
+const valorDoContador = document.querySelector("#valorContador");
 let resultado = 0;
 
 function adicionar() {
   resultado = resultado + 1;
   /* resultado += 1; */
-  const valorDoContador = document.querySelector("#valorContador");
   valorDoContador.innerHTML = resultado;
 }
 function resetar() {
-  const valorDoContador = document.querySelector("#valorContador");
-
   valorDoContador.innerHTML = resultado = 0;
 }
 
 function remover() {
   resultado = Math.max(0, resultado - 1);
-  const valorDoContador = document.querySelector("#valorContador");
 
   valorDoContador.innerHTML = resultado;
+}
+
+for (let indice = 0; indice < 5; indice++) {
+  console.log("indices: " + indice);
+}
+
+const strings = ["paulo ", "teste ", "macarrao "];
+
+for (let i = 0; i < 2; i++) {
+  console.log("strings: " + strings);
+}
+
+function adicionar() {
+  console.count("clicou em adicionar");
+}
+function resetar() {
+  console.clear();
 }
